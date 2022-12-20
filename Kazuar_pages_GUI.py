@@ -76,8 +76,6 @@ db.close()
 class secin:
 
     def __init__ (self, master=None, app_sec_in=None):
-
-
         self.string_to_search=None
         self.file_name=None
         self.label_countdown = None
@@ -737,12 +735,10 @@ class anti_tamper:
                                  "3. Connect J-Tag and type C cable to tester PC",
               font=LARGE_FONT, bg="light sky blue").pack()
 
-        self.load = ImageTk.PhotoImage(Image.open("/home/tester/PycharmProjects/GUI_production_kazuar/image"
-                               "/anti_tamper1.PNG"))
+        self.load = ImageTk.PhotoImage(Image.open("/anti_tamper1.PNG"))
         Label(self.log_f_1_at, image=self.load).pack(pady=50, side=LEFT, padx=250)
 
-        self.load2 = ImageTk.PhotoImage(Image.open("/home/tester/PycharmProjects/GUI_production_kazuar/image"
-                                "/anti_tamper2.PNG"))
+        self.load2 = ImageTk.PhotoImage(Image.open("/anti_tamper2.PNG"))
         Label(self.log_f_1_at, image=self.load2).pack(pady=50, side=LEFT, padx=50)
 
         Button(self.next_log_f_1_at, text="Start\nBurning", bg="green", fg="white", font=FONT,
@@ -1204,7 +1200,6 @@ class sec_out:
 
         Entry(self.log_f_input, textvariable=self.board_sn_sec_out, bd=10, font=LARGE_FONT_button).grid(row=1, column=0,
                                                                                                        pady=10)
-        # self.board_sn_sec_out.set('NS-KB31-R01-XXXXXXXX')
 
         Label(self.log_f_input, text="SOM\nSerial Number", font=LARGE_FONT_button,
               bg="light sky blue").grid(row=2, column=0, pady=30, sticky=N)
@@ -1245,8 +1240,7 @@ class sec_out:
               font=LARGE_FONT, bg="light sky blue").pack( )
         Label(self.log_f_1, text="***** Check if red LED on Kazuar board bottom is ON *****",
               font=LARGE_FONT, bg="light sky blue", fg='red').pack( )
-        self.img = ImageTk.PhotoImage(Image.open("/home/tester/PycharmProjects/GUI_production_kazuar/image"
-                                                 "/secin1.png"))
+        self.img = ImageTk.PhotoImage(Image.open("/secin1.png"))
         Label(self.log_f_1, image=self.img, borderwidth=0, bg='light sky blue', relief="flat").pack(pady=15)
         self.button_confirmed_process = Button(self.next_log_f_1, text="Confirmed\nSOM", bg="green", fg="white",
                                                font=FONT,
@@ -1451,8 +1445,6 @@ class sec_out:
         print('fail')
         self.back_to_main()
 
-
-        '''cmd displayed and run commend of flashing SecIn img '''
 
     def check_sec_out_connect (self):
             msg_sec_out = tk.messagebox.askquestion('cmd', 'Are you sure the connector type C connected? ')
@@ -1853,11 +1845,10 @@ class automation_test:
         else:
             import os
             os.system("gnome-terminal  --geometry=500x500+100+200 "
-                      " --working-directory=/home/tester/workspace/automation/tests_collection "
-                      "/hw_production_tests "
+                      " --working-directory=/home/... "
                       f" -- bash -c \" sudo -S pytest -v -m hardware_rev{self.rev.get()}"
                       f" --wifi_ip={self.ip.get().upper()} "
-                      f"--html='/home/tester/Test_Results_Aoutomation/{self.host_name.get().upper()} - {self.time_now}.html'"
+                      f"--html='/home/...n/{self.host_name.get().upper()} - {self.time_now}.html'"
                       f"--self-contained-html"
                       f" --capture=tee-sys -rP -rF; "
                       "exec bash\"")
