@@ -1,4 +1,3 @@
-# from Main_menu_GUI import *
 from tkinter import messagebox
 import tkinter as tk
 import time
@@ -40,7 +39,6 @@ def restart ():
 
 
 # functions read from secin page #
-# Main_menu.py #
 def terminal_for_sec_in ():
     import subprocess
     import os
@@ -51,7 +49,6 @@ def terminal_for_sec_in ():
 
 
 # functions read from sec-out page #
-# Main_menu.py #
 def terminal_sec_out ():
     import subprocess
     import os
@@ -219,21 +216,6 @@ def query ():
                                                                     record[3], record[4]), tags=('oddrow',), )
 
     count += 1
-
-    # Button(second_canvas, text='Back', bg='blue', fg='white',
-    #        command=exit, bd=6, font=LARGE_FONT_button_next).pack(padx=30, ipady=20, pady=30, ipadx=25)
-    #
-    # Button(second_canvas, text='Excel', bg='green', fg='white',
-    #        command="", bd=6, font=LARGE_FONT_button_next).pack(ipadx=25, ipady=20, pady=50, padx=30)
-    #
-    # Button(second_canvas, text='Delete\n(select ID)', bg='red', fg='white',
-    #        command="", bd=6, font=LARGE_FONT_button_next).pack(pady=30, padx=30, ipady=10)
-    #
-    # delete_box_sec_in = Entry(second_canvas, width=2)
-    # delete_box_sec_in.config(font=FONT, relief='flat')
-    # delete_box_sec_in.insert(0, 'ID')
-    # delete_box_sec_in.pack()
-    # root_app.mainloop()
 
     ########
     Button(second_canvas, text='Back', bg='blue', fg='white',
