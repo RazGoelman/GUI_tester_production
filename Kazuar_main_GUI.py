@@ -3,11 +3,8 @@ import tkinter as ttk
 from tkinter import *
 from tkinter import messagebox, StringVar
 import time
-# from function_GUI import exit_application
 from Kazuar_pages_GUI import secin, sec_out, anti_tamper, database_secin, database_sec_out,\
     database_anti_tamper, database_automation_test, automation_test
-
-# from tester import Console
 import sqlite3
 from PIL import ImageTk, Image
 
@@ -60,7 +57,7 @@ class App:
         self.query_logf = Frame(self.frame, padx=10, bg="black")
         self.next1_logf = Frame(self.frame, padx=10, bg="black")
         self.enter = ImageTk.PhotoImage(
-            Image.open("/home/tester/PycharmProjects/GUI_production_kazuar/image/Capture3.PNG"))
+            Image.open("/Capture3.PNG"))
         self.label = Label(self.title, image=self.enter, borderwidth=0, bg='black', relief="flat")
         self.label.pack()
 
@@ -120,7 +117,7 @@ class App:
         e1.grid(row=1, column=1)
         e1.bind("<Return>", self.entry_pass2)
         self.eye1 = ImageTk.PhotoImage(
-            Image.open("/home/tester/PycharmProjects/GUI_production_kazuar/image/eye.png"))
+            Image.open("/eye.png"))
         self.button_eye1 = Button(self.crf, image=self.eye1, relief="flat", command=self.entry_pass2)
         self.button_eye1.grid(row=1, column=1, ipadx=10, ipady=10, sticky=E)
 
@@ -216,7 +213,7 @@ class App:
 
         def check_input_list ():
             global button_query_accesses
-            password_1 = "12345"
+            password_1 = "*"
 
             entered_password = password_entry.get()
 
@@ -431,7 +428,7 @@ class Page_1:
                command=self.sec_out_page, highlightbackground='blue',
                highlightthickness=10)
         self.secout_but.grid(row=2, column=0, padx=25, sticky=N, pady=20, ipadx=30)
-        ####################################################################################################
+     
         ####################################################################################################
         self.automation_but = Button(self.log_f_right, text="Automation\nTest", font=LARGE_FONT_button, bg="white", bd=12,
                command=self.test_for_automation, highlightbackground='blue',
@@ -802,7 +799,7 @@ class Page_1:
             self.root_all_database_query=Tk()
 
             def test_database_query ():
-                password_1="12345"
+                password_1="*"
                 entered_pswrd=password_entry.get()
                 if entered_pswrd == password_1:
 
