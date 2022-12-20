@@ -560,7 +560,6 @@ class database_anti_tamper:
         style = ttk.Style()
         # Pick a theme
         style.theme_use("clam")
-        # ('clam', 'alt', 'default', 'classic')
         # Configure our treeview colors
 
         style.configure("Treeview",
@@ -719,7 +718,7 @@ class database_anti_tamper:
         self.root_for_export_excel_file = Tk()
 
         def test_export_excel_file ():
-            password_1 = "*****"
+            password_1 = "*"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -955,7 +954,7 @@ class database_automation_test:
         self.delete_data_database_automation = Tk()
 
         def test_database_query ():
-            password_1 = "*****"
+            password_1 = "*"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -1019,7 +1018,7 @@ class database_automation_test:
         self.root_for_export_excel_file = Tk()
 
         def test_export_excel_file ():
-            password_1 = "*****"
+            password_1 = "*"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
