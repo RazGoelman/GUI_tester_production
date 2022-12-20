@@ -43,8 +43,8 @@ def terminal_for_sec_in ():
     import subprocess
     import os
 
-    cmd = "gnome-terminal --geometry=100x5+182+300 --working-directory=/home/tester/SecIn -- bash -c \"echo " \
-          f"12345 | sudo -S ./write_si_emmc.sh empty |& tee -a output_flash_secin.txt; exec bash\" "
+    cmd = "gnome-terminal --geometry=100x5+182+300 --working-directory=/home/... -- bash -c \"echo " \
+          f"**** | sudo -S ./xxxx |& tee -a output_flash_secin.txt; exec bash\" "
     subprocess.Popen(args=[cmd], shell=True, stdout=subprocess.PIPE, preexec_fn=os.setsid)
 
 
@@ -52,21 +52,17 @@ def terminal_for_sec_in ():
 def terminal_sec_out ():
     import subprocess
     import os
-    cmd_sec_out = "gnome-terminal --geometry=100x5+182+300 --working-directory=/home/tester/SecIn -- bash -c \"echo " \
-          f"12345 | sudo -S ./write_si_emmc.sh empty |& tee -a output_flash_sec_out.txt; exec bash\" "
+    cmd_sec_out = "gnome-terminal --geometry=100x5+182+300 --working-directory=/home/... -- bash -c \"echo " \
+          f"**** | sudo -S ./xxxx |& tee -a output_flash_sec_out.txt; exec bash\" "
     subprocess.Popen(args=[cmd_sec_out], shell=True, stdout=subprocess.PIPE, preexec_fn=os.setsid)
-
-
-    # with open("stdout.txt", "wb") as out, open("stderr.txt", "wb") as err:
-    #     subprocess.Popen(cmd, shell=True, stdout=out, stderr=err, preexec_fn=os.setsid)
 
 
 def terminal_reset_sec_out ():
     import subprocess
     import os
     cmd = "gnome-terminal --geometry=500x500+100+200 " \
-          "--working-directory=/home/tester/sec_out/0.1.14" \
-          " -- bash -c \"echo 12345 | sudo -S ./flash_so_uuu.sh kazuar-sec_out-*.img.gz; exec bash\" "
+          "--working-directory=/home/..." \
+          " -- bash -c \"echo **** | sudo -S ./xxxx; exec bash\" "
     subprocess.Popen(args=[cmd], shell=True, stdout=subprocess.PIPE, preexec_fn=os.setsid)
 
 
@@ -74,7 +70,7 @@ def check_password_for_reset ():
     root = Tk()
 
     def test_reset ():
-        password_1 = "12345"
+        password_1 = "***"
         entered_pswrd = password_entry.get()
         if entered_pswrd == password_1:
 
@@ -113,8 +109,8 @@ def terminal_for_anti_tamper():
     import subprocess
     import os
     cmd = "gnome-terminal --geometry=100x5+182+300 " \
-          "--working-directory=/home/tester/Downloads/opt/SEGGER/JLink/JFlashLiteExe -- bash -c \"echo " \
-          "12345 | sudo -S /opt/SEGGER/JLink/JFlashLiteExe\""
+          "--working-directory=/home/... -- bash -c \"echo " \
+          "**** | sudo -S /opt/...\""
     subprocess.Popen(args=[cmd], shell=True, stdout=subprocess.PIPE, preexec_fn=os.setsid)
 
 
@@ -122,8 +118,8 @@ def terminal_for_anti_tamper_status ():
     import subprocess
     import os
     cmd = "gnome-terminal --geometry=100x5+182+300 " \
-          "--working-directory=/home/tester -- bash -c \"echo " \
-          "12345 | sudo -S gtkterm\""
+          "--working-directory=/home/... -- bash -c \"echo " \
+          "*** | sudo -S gtkterm\""
     subprocess.Popen(args=[cmd], shell=True, stdout=subprocess.PIPE, preexec_fn=os.setsid)
 from tkinter import *
 import sqlite3
@@ -147,7 +143,6 @@ def query ():
     style = ttk.Style()
     # Pick a theme
     style.theme_use("clam")
-    # ('clam', 'alt', 'default', 'classic')
     # Configure our treeview colors
 
     style.configure("Treeview",
