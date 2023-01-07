@@ -64,34 +64,9 @@ The tester is a closed/private PC without connection to the network database and
 
 inside.
 
-The database which we used is sqlite3 (internal python database), which saves all the serial numbers (Si / So (SOM) / PC (HW information)) and all the 
-
-automation tests.
+The database which we used is sqlite3 (internal python database), which saves all the serial numbers (Si / So (SOM) / PC (HW information)) and all the automation tests.
 
  
-
- 
-
-**Kazuar Production login:**
-
-![image](https://user-images.githubusercontent.com/66781442/208663860-04b30448-478a-4f8b-8362-a052cc0ec543.png)
-
-
-**Kazuar Production creates an account:**
-
-![image](https://user-images.githubusercontent.com/66781442/208664037-329e648a-7604-4929-90b7-ae208705e8af.png)
-
-
-**Kazuar Production menu:**
-
-![image](https://user-images.githubusercontent.com/66781442/208664191-c02feacd-19bb-4f0a-b0a3-e89aed2fffcc.png)
-
-
-**Kazuar Production database menu:**
-
-![image](https://user-images.githubusercontent.com/66781442/208664306-8048cd9f-1d75-43d9-9cc2-a9ba15418123.png)
-
-
 
 **Flow (block diagram):**
 
