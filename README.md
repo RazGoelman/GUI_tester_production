@@ -3,11 +3,11 @@
 
 **Overview**
 
-The purpose of this page is to describe the SW design of the Kazuar Production tester UX/UI with an emphasis of user name and password to process login 
+The purpose of this page is to describe the SW design of the Production tester UX/UI with an emphasis of user name and password to process login 
 
 authentication.
 
-Kazuar Production tester is a graphical application that runs
+The Production tester is a graphical application that runs
 
 options of burning and automation test for each PC system including save data into database (for each burn steps SI/SO/AT and automation test)
 
