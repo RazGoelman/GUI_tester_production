@@ -76,8 +76,6 @@ db.close()
 class secin:
 
     def __init__ (self, master=None, app_sec_in=None):
-
-
         self.string_to_search=None
         self.file_name=None
         self.label_countdown = None
@@ -421,97 +419,12 @@ class secin:
 
                 print('process completed!')
 
-        # if self.text_p is None:
-                # import schedule
-                # def red_last_line ():
-                #     readfile=open('/home/tester/SecIn/secin.txt' ,'r')
-                #     line_list=readfile.readlines()
-                #     readfile.close()
-                #     print(line_list)
-                #     print('last line: ' ,line_list[len(line_list) - 1])
-                #
-                #     if line_list[len(line_list) - 1] == 'Successful':
-                #         self.text.config(text='Successful' ,bd=10 ,bg='green' ,font=LARGE_FONT_button_title2 ,
-                #                          relief=RAISED)
-                #         self.text.config(command=self.result_pass)
-                #         self.update(seconds=int(self.get_element_value(self.xmlDocument ,"ProcessTimeSeconds")))
-                #
-                #         print('process completed!')
-                #     else:
-                #         self.text.config(text='In-Process' ,bd=10 ,bg='green' ,font=LARGE_FONT_button_title2 ,
-                #                          relief=RAISED)
-                #         print('In process')
-                #
-                # schedule.every(1).second.do(red_last_line)
-                # while True:
-                #     schedule.run_pending()
-
-                # stdout_as_str=self.text_p.stdout.decode("utf-8")
-                # poll=self.text_p.poll()
-                # if poll is None:
-                #     time.sleep(2)
-
-                # self.text_p.subprocess is alive
-                #     count=0
-                #     print("Using readlines()")
-                #
-                #     with open("/home/tester/SecIn/secin.txt") as fp:
-                #         lines_of_file=fp.readlines()
-                #         print(f"Lines: {len(lines_of_file)}")
-                #
-                #         for line in lines_of_file:
-                #             count+=1
-                #             print("Line{}: {}".format(count ,line.strip()))
-                #
-                #             # if line.strip() == 'Secure Input eMMC is not yet exposed to us':
-                #             #     print('wait..')
-                #
-                #             if line.strip() == 'Successful':
-                #                 self.text.config(text='Successful')
-                #                 self.text.config(command=self.result_pass)
-                #                 self.update(seconds=int(self.get_element_value(self.xmlDocument ,"ProcessTimeSeconds")))
-                #
-                #                 print('process completed!')
-                #
-                #             else:
-                #                 pass
-                #                 self.text.config(text='In-Process' ,bd=10 ,bg='green' ,font=LARGE_FONT_button_title2 ,
-                #                                  relief=RAISED)
-                #                 print('In process')
-
-
 
             else:
                 print("disconnected")
                 ret = messagebox.showerror('error','cable disconnected\nor not approved!\nplease check it ')
                 if ret == 'ok':
                     pass
-
-
-                # if self.text_p:
-                #     time.sleep(1)
-                #     self.text.config(text='Successful', bd=10, bg='green', font=LARGE_FONT_button_title2, relief=RAISED)
-                #     self.text.config(command=self.result_pass)
-                #     print('Working1')
-                #     # while subprocess.CalledProcessError is None:
-                #     #     # ---- read a line from the process output ----
-                #     #     msg = self.text_p.stdout.readline().strip()
-                #     #     if not msg:
-                #     #         self.text.config(text='Error!',state=DISABLED)
-                #     #         terminal_close = messagebox.showerror('error','Terminal, closed!')
-                #     #         if terminal_close == 'ok':
-                #     #             self.stop_process()
-                #     #         print('not Working1')
-                #             # continue
-                #             # print(msg)
-                # else:
-                #     print('not working')
-                #     self.text.config(text='Error!',state=DISABLED)
-                #     terminal_close = messagebox.showerror('error','Terminal, closed!')
-                #     if terminal_close == 'ok':
-                #         self.stop_process()
-
-
 
 
     def page_to_start_burning (self):
@@ -822,12 +735,10 @@ class anti_tamper:
                                  "3. Connect J-Tag and type C cable to tester PC",
               font=LARGE_FONT, bg="light sky blue").pack()
 
-        self.load = ImageTk.PhotoImage(Image.open("/home/tester/PycharmProjects/GUI_production_kazuar/image"
-                               "/anti_tamper1.PNG"))
+        self.load = ImageTk.PhotoImage(Image.open("/anti_tamper1.PNG"))
         Label(self.log_f_1_at, image=self.load).pack(pady=50, side=LEFT, padx=250)
 
-        self.load2 = ImageTk.PhotoImage(Image.open("/home/tester/PycharmProjects/GUI_production_kazuar/image"
-                                "/anti_tamper2.PNG"))
+        self.load2 = ImageTk.PhotoImage(Image.open("/anti_tamper2.PNG"))
         Label(self.log_f_1_at, image=self.load2).pack(pady=50, side=LEFT, padx=50)
 
         Button(self.next_log_f_1_at, text="Start\nBurning", bg="green", fg="white", font=FONT,
@@ -867,35 +778,7 @@ class anti_tamper:
         Button(self.next_log_f_2, text="Fail\nBurning", bg="blue", fg="white", font=FONT,
                command=self.stop_process_at, bd=12).grid(row=2, column=2, padx=100, ipadx=60, pady=20)
         ########################################################################################################
-        ###############################################################################################
-        # self.title_stop_process_at = Frame(self.frame_anti_tamper, padx=10, pady=1, bg="light sky blue")
-        # self.log_f_stop_process_at = Frame(self.frame_anti_tamper, padx=10, pady=150, bg="light sky blue")
-        # self.off_stop_process_at = Frame(self.frame_anti_tamper, padx=10, pady=150, bg="light sky blue")
-        # self.next_log_f_stop_process_at = Frame(self.frame_anti_tamper, padx=10, pady=30, bg="light sky blue",
-        #                                      highlightbackground='blue', highlightthickness=20, highlightcolor='blue')
-        # left_label = Label(self.title_stop_process_at, bg="light sky blue", text="Burning Secure Input",
-        #                    font=LARGE_FONT_button_title)
-        # left_label.pack(fill="x")
-        #
-        # Label(self.log_f_stop_process_at, text='Stopping Process\nReason  ', bg="light sky blue",
-        #       font=LARGE_FONT_button).grid(pady=20)
-        #
-        # options_stop_process = ("Error in process terminal", "Wrong Serial Number", "J-TAG Cable disconnected to PC",
-        #                         "J-TAG Cable disconnected to K.B","J-Link box damaged", "J-TAG Cable damaged", "Kazuar Board damaged".split())
-        # menu_stop_process = OptionMenu(self.log_f_stop_process_at, self.reason_at, *options_stop_process)
-        # menu_stop_process.config(font=LARGE_FONT)
-        # self.reason_at.set("Select")
-        # menu_stop_process.grid(pady=20)
-        #
-        # self.next_at = Button(self.next_log_f_stop_process_at, text="Next Bord", bg="blue", fg="white", font=FONT,
-        #                    command=self.check_stop_process_at, bd=12)
-        # self.next_at.grid(row=2, column=0, padx=400, ipadx=50, ipady=30, pady=20)
-        # Label(self.next_log_f_stop_process_at, text="", bg="light sky blue"
-        #       ).grid(row=2, column=1, padx=100, ipadx=100, ipady=30, pady=20)
-        # self.next_menu_at = Button(self.next_log_f_stop_process_at, text="Menu", bg="red", fg="white", font=FONT,
-        #                         command=self.check_stop_process_at, bd=12)
-        # self.next_menu_at.grid(row=2, column=2, padx=100, ipadx=100, ipady=30, pady=20)
-        #####################################################333
+      
         self.title_stop_process_at = Frame(self.frame_anti_tamper,padx=10,pady=1,bg="light sky blue")
         self.log_f_stop_process_at = Frame(self.frame_anti_tamper,padx=10,pady=100,bg="light sky blue")
         self.off_stop_process_at = Frame(self.frame_anti_tamper,padx=10,pady=150,bg="light sky blue")
@@ -915,7 +798,6 @@ class anti_tamper:
         menu_stop_process = OptionMenu(self.log_f_stop_process_at,self.reason_at,*options_stop_process)
         menu_stop_process.config(font=LARGE_FONT)
         menu_stop_process.grid(pady=20)
-        # self.reason_at.set("Select")
 
         self.next_at = Button(self.next_log_f_stop_process_at,text="Next Bord",bg="blue",fg="white",font=FONT,
                            command=self.check_stop_process_at,bd=12)
@@ -1136,7 +1018,7 @@ class anti_tamper:
         # Create a database or connect to one
         self.conn = sqlite3.connect('Kazuar_tester_PC.db')
         self.c = self.conn.cursor()
-        # Insert Into Table
+        // Insert Into Table
         self.c.execute("INSERT INTO AT_input_user_db VALUES (:Date, :User, :SN_Kazuar_Board, :AT_version, :Result)",
                   {
                       'Date': time.strftime("%D %H:%M:%S"),
@@ -1318,7 +1200,6 @@ class sec_out:
 
         Entry(self.log_f_input, textvariable=self.board_sn_sec_out, bd=10, font=LARGE_FONT_button).grid(row=1, column=0,
                                                                                                        pady=10)
-        # self.board_sn_sec_out.set('NS-KB31-R01-XXXXXXXX')
 
         Label(self.log_f_input, text="SOM\nSerial Number", font=LARGE_FONT_button,
               bg="light sky blue").grid(row=2, column=0, pady=30, sticky=N)
@@ -1359,8 +1240,7 @@ class sec_out:
               font=LARGE_FONT, bg="light sky blue").pack( )
         Label(self.log_f_1, text="***** Check if red LED on Kazuar board bottom is ON *****",
               font=LARGE_FONT, bg="light sky blue", fg='red').pack( )
-        self.img = ImageTk.PhotoImage(Image.open("/home/tester/PycharmProjects/GUI_production_kazuar/image"
-                                                 "/secin1.png"))
+        self.img = ImageTk.PhotoImage(Image.open("/secin1.png"))
         Label(self.log_f_1, image=self.img, borderwidth=0, bg='light sky blue', relief="flat").pack(pady=15)
         self.button_confirmed_process = Button(self.next_log_f_1, text="Confirmed\nSOM", bg="green", fg="white",
                                                font=FONT,
@@ -1565,8 +1445,6 @@ class sec_out:
         print('fail')
         self.back_to_main()
 
-
-        '''cmd displayed and run commend of flashing SecIn img '''
 
     def check_sec_out_connect (self):
             msg_sec_out = tk.messagebox.askquestion('cmd', 'Are you sure the connector type C connected? ')
@@ -1854,11 +1732,7 @@ class sec_out:
                                      f'SOM- {self.som_sn_sec_out.get( )}\nalready burned!\nTry a different one.')
             else:
                 self.connect_board_sec_out( )
-    
-
-#####################################################################################################################
 ####################################################################################################################
-
 
 class automation_test:
     def __init__(self, master=None, app_automation_test=None):
@@ -1970,13 +1844,11 @@ class automation_test:
             messagebox.showerror("error", "Missing Data!")
         else:
             import os
-            # -iptables -I INPUT 1 -p icmp --icmp-type echo-request -j ACCEPT
             os.system("gnome-terminal  --geometry=500x500+100+200 "
-                      " --working-directory=/home/tester/workspace/automation/tests_collection "
-                      "/hw_production_tests "
+                      " --working-directory=/home/... "
                       f" -- bash -c \" sudo -S pytest -v -m hardware_rev{self.rev.get()}"
                       f" --wifi_ip={self.ip.get().upper()} "
-                      f"--html='/home/tester/Test_Results_Aoutomation/{self.host_name.get().upper()} - {self.time_now}.html'"
+                      f"--html='/home/...n/{self.host_name.get().upper()} - {self.time_now}.html'"
                       f"--self-contained-html"
                       f" --capture=tee-sys -rP -rF; "
                       "exec bash\"")
@@ -1988,10 +1860,10 @@ class automation_test:
 
             # Create Submit Function For database
     def submit (self):
-        # Create a database or connect to one
+        //Create a database or connect to one
         self.conn = sqlite3.connect('Kazuar_tester_PC.db')
         self.c = self.conn.cursor()
-        # Insert Into Table
+        // Insert Into Table
         self.c.execute("INSERT INTO database_automation VALUES (:Date, :User, :EMS, :ODM_SN, :Platform_Model, "
                   ":Processor_GEN, "
                   ":Processor, :DDR_Size, :Screen_Model, :Keyboard_Configuration, :Switching_Board, "

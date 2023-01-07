@@ -37,7 +37,6 @@ class database_secin:
         style = ttk.Style()
         # Pick a theme
         style.theme_use("clam")
-        # ('clam', 'alt', 'default', 'classic')
         # Configure our treeview colors
 
         style.configure("Treeview",
@@ -133,7 +132,7 @@ class database_secin:
         self.delete_data_si.title('permission for database')
 
         def test_database_query ():
-            password_1 = "12345"
+            password_1 = "*****"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -196,7 +195,7 @@ class database_secin:
         self.root_for_export_excel_file = Tk()
 
         def test_export_excel_file ():
-            password_1 = "12345"
+            password_1 = "*****"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -392,7 +391,7 @@ class database_sec_out:
         self.delete_data_so = Tk()
 
         def test_database_query ():
-            password_1 = "12345"
+            password_1 = "*****"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -454,7 +453,7 @@ class database_sec_out:
         self.root_for_export_excel_file = Tk()
 
         def test_export_excel_file ():
-            password_1 = "12345"
+            password_1 = "*****"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -561,7 +560,6 @@ class database_anti_tamper:
         style = ttk.Style()
         # Pick a theme
         style.theme_use("clam")
-        # ('clam', 'alt', 'default', 'classic')
         # Configure our treeview colors
 
         style.configure("Treeview",
@@ -658,7 +656,7 @@ class database_anti_tamper:
         self.delete_data_anti_tamper = Tk()
 
         def test_database_query ():
-            password_1 = "12345"
+            password_1 = "*****"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -709,8 +707,6 @@ class database_anti_tamper:
             self.conn.close()
             self.go_back_db_anti_tamper()
 
-        # self.conn.commit()
-        # self.conn.close()
 
     @staticmethod
     def close_export_excel ():
@@ -722,7 +718,7 @@ class database_anti_tamper:
         self.root_for_export_excel_file = Tk()
 
         def test_export_excel_file ():
-            password_1 = "12345"
+            password_1 = "*"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -766,7 +762,6 @@ class database_anti_tamper:
         # function to export db to excel file
 
     def export_to_csv_anti_tamper (self):
-        # global rowcount
         # Create a database or connect to one
         self.conn = sqlite3.connect('Kazuar_tester_PC.db')
         self.c = self.conn.cursor()
@@ -832,7 +827,6 @@ class database_automation_test:
         style = ttk.Style()
         # Pick a theme
         style.theme_use("clam")
-        # ('clam', 'alt', 'default', 'classic')
         # Configure our treeview colors
 
         style.configure("Treeview",
@@ -960,7 +954,7 @@ class database_automation_test:
         self.delete_data_database_automation = Tk()
 
         def test_database_query ():
-            password_1 = "12345"
+            password_1 = "*"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
@@ -1024,7 +1018,7 @@ class database_automation_test:
         self.root_for_export_excel_file = Tk()
 
         def test_export_excel_file ():
-            password_1 = "12345"
+            password_1 = "*"
             entered_pswrd = password_entry.get()
             if entered_pswrd == password_1:
 
