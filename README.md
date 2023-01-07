@@ -1,18 +1,14 @@
 # GUI_tester_production
 
 
-**Overview**
+**Project goal**:
 
-The purpose of this page is to describe the SW design of the Production tester UX/UI with an emphasis of user name and password to process login 
+Describing the system and architecture requirements of the production tester UX/UI with an emphasis on user name and password to process login authentication.
 
-authentication.
+The production tester is a graphical application that runs options of burning and automation test for each PC system including saving data into the 
+database (for each burn steps SI/SO/AT and automation test)
 
-The Production tester is a graphical application that runs
-
-options of burning and automation test for each PC system including save data into database (for each burn steps SI/SO/AT and automation test)
-
-After switching to application mode the user will get permission to do burning of SI/SO/AT include automation and screen panel test.
-
+After switching to application mode the user will get permission to do burning of SI/SO/AT including automation and screen panel test.
  
 
 **System and Architecture Requirements**
