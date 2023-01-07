@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KazuarPagesGui>
+  <!--
+     Secure Input
+      -->
+  <boardsn>NS-KB31-R01-XXXXXXXX</boardsn>
+  <siVersion>0.0.24</siVersion>
+  <StartTime>00:00:00</StartTime>
+  <SelectReason>Select</SelectReason>
+  <ProcessTimeSeconds>700</ProcessTimeSeconds>
+  <ProcessTerminalSiDirectory>/home/tester/SecIn/0.0.24/0.0.24-14914aa7b/kazuar-secin-armhf-0.0.24-20220224-14914aa7b</ProcessTerminalSiDirectory>
+  <ProcessFileSi>write_si_emmc.sh empty</ProcessFileSi>
+  <FileToSaveDebag>secin.txt</FileToSaveDebag>
+  <TesterPcPassword>12345</TesterPcPassword>
+  <FileForResults>/home/tester/SecIn/secin.txt</FileForResults>
+  <FailuresReasonsFile>sample.txt</FailuresReasonsFile>
+
+  <!--anti_tamper_status-->
+  <!--
+     Anti-Tamper
+      -->
+  <boardsnAT>NS-KB31-R01-XXXXXXXX</boardsnAT>
+  <AntiTamperVersion>0.0.8</AntiTamperVersion>
+  <SelectReason>Select</SelectReason>
+  <TesterPcPassword>12345</TesterPcPassword>
+  <ProcessTerminalATDirectory>/home/tester/Downloads/opt/SEGGER/JLink/JFlashLiteExe</ProcessTerminalATDirectory>
+  <ProcessFileSAT>/opt/SEGGER/JLink/JFlashLiteExe</ProcessFileSAT>
+  <FailuresReasonsFile>sample_anti_tamper.txt</FailuresReasonsFile>
+  <AntiTamperStatusWorkingDirectory>/home/tester</AntiTamperStatusWorkingDirectory>
+  <FileToAntiTamper>gtkterm</FileToAntiTamper>
+
+<!--
+     Secure Output
+      -->
+    <sompn>F8DC7AXXXXXX</sompn>
+    <somversion>full</somversion>
+    <boardSO>NS-KB31-R01-XXXXXXXX</boardSO>
+    <ReasonFailureSo>Select</ReasonFailureSo>
+    <WorkingDirectorySo>/home/tester/secout/0.1.18/0.1.18-eb97c31</WorkingDirectorySo>
+    <TesterPcPassword>12345</TesterPcPassword>
+    <FlashImgFile>flash_so_uuu.sh kazuar-secout-im8mq-0.1.18-20211231-eb97c31.img.gz</FlashImgFile>
+    <SecureInputVersion>flash_so_uuu.sh kazuar-secout-im8mq-0.1.18-20211231-eb97c31.img.gz</SecureInputVersion>
+    <FlashLogFile>secout_log.txt</FlashLogFile>
+
+
+</KazuarPagesGui>
+
